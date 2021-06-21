@@ -1,12 +1,17 @@
 'use strict';
 
-const person = {
-    name: '',
-    age: '',
+let numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели?', '');
+let personalMovieDB = {
+    count: numberOfFilms,
+    movie: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
-
-person.name = prompt('Как вас зовут?');
-person.age = prompt('Сколько вам лет>');
-
-alert(`Привет, ${person.name}`);
-
+let a = prompt('Какой фильм вы смотрели последним?', ''),
+    b = prompt('Дайте оценку этому фильму:', ''),
+    c = prompt('Какой фильм вы смотрели последним?', ''),
+    d = prompt('Дайте оценку этому фильму:', '');
+    personalMovieDB.movie[a] = b;
+    personalMovieDB.movie[c] = d;
+console.log(personalMovieDB);
